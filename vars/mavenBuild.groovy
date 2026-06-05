@@ -1,3 +1,7 @@
 def call() {
-    sh 'mvn clean package'
+    sh '''
+        pwd
+        ls -la
+        mvn clean package
+    '''
 }
