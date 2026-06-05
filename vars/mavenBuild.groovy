@@ -1,11 +1,4 @@
-pipeline {
-    agent any
 
-    stages {
-        stage('Maven Build') {
-            steps {
-                mavenBuild()
-            }
-        }
-    }
+def call() {
+    sh 'mvn clean package'
 }
