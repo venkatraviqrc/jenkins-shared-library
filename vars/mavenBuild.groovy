@@ -1,7 +1,11 @@
-def call() {
-    sh '''
-        pwd
-        ls -la
-        mvn clean package
-    '''
+pipeline {
+    agent any
+
+    stages {
+        stage('Maven Build') {
+            steps {
+                mavenBuild()
+            }
+        }
+    }
 }
